@@ -1,9 +1,8 @@
 import express from 'express';
 const router = express.Router();
+import { scrapePost } from '../services/scraper';
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', scrapePost);
 
 export default router;
